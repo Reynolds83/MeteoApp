@@ -1,0 +1,22 @@
+* {
+    @include box-sizing(border-box);
+}
+
+*::before,
+*::after {
+    @include box-sizing(border-box);
+}
+
+:root {
+    background-color: $bgColor;
+    font-size: 62.5%;
+}
+
+body {    
+    background-color: $bgColor;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+}

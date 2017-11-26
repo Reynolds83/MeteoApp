@@ -1,0 +1,16 @@
+.back {
+    background-color: $secondaryColor;
+    padding: 8px;
+    
+    #map {
+        color: #000;
+        height: 250px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+}

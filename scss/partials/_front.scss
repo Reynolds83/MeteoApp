@@ -1,0 +1,242 @@
+div.front {
+    background-color: $primaryColor;
+
+    div.primary-info {
+        height: 80px;
+        position: relative;
+        span {
+            position: absolute;
+            &.position {
+                top: 15px;
+                left: 12px;
+                &::before {
+                    @include icon($icon-location);
+                }
+            }
+            &.degrees {
+                font-size: 38px;
+                font-weight: bold;
+                top: 22px;
+                right: 12px;
+            }
+        }
+    }
+
+    div.weather-info {
+        margin-bottom: 50px;
+        text-align: center;
+        div.icon {
+            line-height: normal;
+            &::after {
+                font-size: 96px;
+            }            
+            &.code0::after {
+                @include icon($icon-wind);
+            }
+            &.code1::after {
+                @include icon($icon-wind);
+            }
+            &.code2::after {
+                @include icon($icon-wind);
+            }
+            &.code3::after {
+                @include icon($icon-clouds-flash-alt);
+            }
+            &.code4::after {
+                @include icon($icon-clouds-flash-alt);
+            }
+            &.code5::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code6::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code7::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code8::after {
+                @include icon($icon-drizzle);
+            }
+            &.code9::after {
+                @include icon($icon-drizzle);
+            }
+            &.code10::after {
+                @include icon($icon-rain);
+            }
+            &.code11::after {
+                @include icon($icon-rain);
+            }
+            &.code12::after {
+                @include icon($icon-rain);
+            }
+            &.code13::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code14::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code15::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code16::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code17::after {
+                @include icon($icon-hail);
+            }
+            &.code18::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code19::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code20::after {
+                @include icon($icon-fog);
+            }
+            &.code21::after {
+                @include icon($icon-fog);
+            }
+            &.code22::after {
+                @include icon($icon-fog);
+            }
+            &.code23::after {
+                @include icon($icon-wind);
+            }
+            &.code24::after {
+                @include icon($icon-wind);
+            }
+            &.code25::after {
+                @include icon($icon-snowflake);
+            }
+            &.code26::after {
+                @include icon($icon-cloud);
+            }
+            &.code27::after {
+                @include icon($icon-cloud-moon);
+            }
+            &.code28::after {
+                @include icon($icon-cloud-sun);
+            }
+            &.code29::after {
+                @include icon($icon-cloud-moon);
+            }
+            &.code30::after {
+                @include icon($icon-cloud-sun);
+            }
+            &.code31::after {
+                @include icon($icon-moon);
+            }
+            &.code32::after {
+                @include icon($icon-sun);
+            }
+            &.code33::after {
+                @include icon($icon-moon);
+            }
+            &.code34::after {
+                @include icon($icon-sun);
+            }
+            &.code35::after {
+                @include icon($icon-rain);
+            }
+            &.code36::after {
+                @include icon($icon-temperature);
+            }
+            &.code37::after {
+                @include icon($icon-cloud-flash-alt);
+            }
+            &.code38::after {
+                @include icon($icon-cloud-flash-alt);
+            }
+            &.code39::after {
+                @include icon($icon-cloud-flash-alt);
+            }
+            &.code40::after {
+                @include icon($icon-cloud-flash-alt);
+            }
+            &.code41::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code42::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code43::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code44::after {
+                @include icon($icon-cloud);
+            }
+            &.code45::after {
+                @include icon($icon-clouds-flash-alt);
+            }
+            &.code46::after {
+                @include icon($icon-snow-heavy);
+            }
+            &.code47::after {
+                @include icon($icon-cloud-flash-alt);
+            }
+            &.code3200::after {
+                @include icon($icon-na);
+            }
+        }
+        p.condition {
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+
+    div.secondary-info {
+        @include clearfix();
+        
+        margin-bottom: 25px;
+        
+        div {
+            float: left;
+            
+            
+            &.humidity-container {
+                font-size: 12px;
+                padding-left: 10px;
+                width: 61%;
+                p {
+                    margin: 0;
+                }
+            }
+            &.wind-container {
+                font-size: 12px;
+                padding-right: 10px;
+                width: 39%;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    div.days {
+        ul {
+            @include clearfix();
+            
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                background-color: $secondaryColor;
+                border-right: 2px solid $primaryColor;
+                float: left;
+                font-size: 14px;
+                padding: 10px 0;
+                text-align: center;
+                width: 14.28%;
+                
+                &:last-child {
+                    border-right: none;
+                }
+                
+                &.active {
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+}

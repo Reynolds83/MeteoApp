@@ -1,0 +1,82 @@
+@mixin box-sizing($type:border-box) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+        flex-basis: 0;
+        order: 1;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin absolute-center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    @include translate(-50%, -50%);
+}
+
+@mixin rotateY($deg:180deg) {
+    -webkit-transform: rotateY($deg);
+    -moz-transform: rotateY($deg);
+    -ms-transform: rotateY($deg);
+    transform: rotateY($deg);
+}
+
+@mixin perspective($value:1000px) {
+    -webkit-perspective: $value;
+    -moz-perspective: $value;
+    perspective: $value;
+}
+
+@mixin backface-visibility($type:hidden) {
+    -webkit-backface-visibility: $type;
+    -moz-backface-visibility: $type;
+    backface-visibility: $type;
+}
+
+@mixin transform-style($value:preserve-3d) {
+    -webkit-transform-style: $value;
+    -moz-transform-style: $value;
+    transform-style: $value;
+}
+
+@mixin transition-property($property:transform) {
+    -webkit-transition-property: -webkit-$property;
+    transition-property: $property;
+}
+
+@mixin transition-duration($duration:.6s) {
+    -webkit-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+@mixin icon($icon) {
+    content: $icon;
+    display: inline-block;
+    font-family: "fontello";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    speak: none;    
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    width: 1em;
+}
